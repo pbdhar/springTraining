@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: microservice-producer
+    
+server:
+  port: 8005
+  
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8007/eureka
+      
+      
+  instance:
+    hostname: localhost
